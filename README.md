@@ -1,4 +1,4 @@
-# Angry-Birds
+# Angry Birds
 
 ## Spil vores Angry Birds
 1. Du skal have Processing version `3.5.4` eller ældre installeret på din computer. [Download her](https://processing.org/download/)
