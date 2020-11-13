@@ -1,19 +1,9 @@
-int h;
-
-void setup() {
-  //fullScreen();
-  size(500,500);
-  h = height;
-  frameRate(120);
-  rectMode(CENTER);
-}
-
 float x;
 float y;
 float g = 9.81;
 float t;
 float x0 = 0;
-float y0 = float(h);
+float y0 = -800;
 float alpha = PI/4;
 float L = 10;
 float A = alpha;
@@ -24,6 +14,13 @@ float v0 = A*sqrt((2*E)/(m*(1+(A*A))));
 
 float[] r = new float[2];
 
+void setup() {
+  //fullScreen();
+  size(1440, 800);
+  frameRate(120);
+  rectMode(CENTER);
+}
+
 void draw() {
   //clear();
   //background(255);
@@ -33,7 +30,7 @@ void draw() {
 
 void mousePressed() {
   
-  x = u0 * t;
+  x = u0 * t + x0;
   y = -0.5*g*(t*t)+v0*t+y0;
   
   y = y * (-1);
