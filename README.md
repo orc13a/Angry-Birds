@@ -11,3 +11,10 @@
 Dette er et SO3 projekt på HTX H. C. Ørsted Gymnasiet Lyngby.
 Et projekt som har fokus på matematiske modeller.
 Fag som er i dette projekt. Fysik `(pi)`, Matematik `(mmhe)`, Programmering `(ajrp)` og Kommunikation og IT `(ae)`.
+
+#### Gruppe
+Oliver C
+Mads
+
+2.i Kerm/it 
+H.C.Ørsted Gymnasiet Lyngby
