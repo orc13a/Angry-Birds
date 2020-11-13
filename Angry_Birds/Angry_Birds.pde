@@ -29,22 +29,10 @@ void draw() {
 }
 
 void mousePressed() {
+  clear();
+  background(255);
+  kast();
   
-  x = u0 * t + x0;
-  y = -0.5*g*(t*t)+v0*t+y0;
-  
-  y = y * (-1);
-  
-  r[0] = x;
-  r[1] = y;
-  
-  t = t + 0.5;
-  
-  println(y0);
-  println('-');
-  
-  fill(0);
-  circle(x, y, 10);
   
   /*x = v0*cos(alpha)*t+x0;
   y = -0.5*g*(t*t)+v0*sin(alpha)*t+y0;
@@ -61,4 +49,22 @@ void mousePressed() {
   
   println(r);
   println('-');*/
+}
+
+void kast() {
+  x = u0 * t + x0;
+  y = -0.5*g*(t*t)+v0*t+y0;
+  
+  y = y * (-1);
+  
+  r[0] = x;
+  r[1] = y;
+  
+  t = t + 0.5;
+  
+  println(y0);
+  println('-');
+  
+  fill(0);
+  circle(x, y, 10);
 }
