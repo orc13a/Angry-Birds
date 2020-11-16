@@ -45,8 +45,8 @@ void draw() {
     textSize(12);
   }
   
-  line(200, height-150, 200, mouseY); // line 1
-  line(mouseX, mouseY, 200, mouseY); // line 2
+  line(200, height-150, 200, mouseY); // line 1 | Lodret
+  line(mouseX, mouseY, 200, mouseY); // line 2 | vandret
   
   float line1 = dist(200, height-150, 200, mouseY);
   float line2 = dist(mouseX, mouseY, 200, mouseY);
@@ -66,7 +66,8 @@ void draw() {
     //y0 = -mouseY;
     x0 = 200; // Skal starte ved slangebøssen og ikke mouseX og Y
     y0 = -650;
-    alpha = asin((line1) / dist(200, height-150, mouseX, mouseY));
+    alpha = degrees(acos((line1) / dist(200, height-150, mouseX, mouseY)));
+    //alpha = (((2 * PI) / 360) * acos((line1) / dist(200, height-150, mouseX, mouseY)));
     //alpha = atan(line1/line2);  
   }
   
@@ -144,6 +145,6 @@ void kast(float newL) {
   
   t = t + 0.25;
   
-  println(y);
+  println(alpha);
   println('-');
 }
