@@ -55,11 +55,11 @@ void draw() {
   fill(255, 0, 0);
   if(x == 0 && y == 0 && pulled == true && mouseR == false) {
     circle(mouseX, mouseY, 20);
-    L = dist(200, height-150, mouseX, mouseY) / 4;
+    L = dist(200, height-150, mouseX, mouseY) / 8;
     //x0 = mouseX;
     //y0 = -mouseY;
     x0 = 200;             // Skal starte ved slangebøssen og ikke mouseX og Y
-    y0 = -(height-150);
+    y0 = -650;
     alpha = asin(line1 / dist(200, height-150, mouseX, mouseY));
   }
   
