@@ -18,6 +18,7 @@ boolean mouseR = false;
 boolean mouseP = false;
 boolean pulled = false;
 boolean birdFlying = false;
+boolean mousePressedFlying = false;
 
 void setup() {
   //fullScreen();
@@ -32,12 +33,17 @@ void draw() {
   background(255);
   
   text("[R] for reset", 50, 50);
-  text("Alpha: " + degrees(alpha) + "°", 70, 70);
+  text("Alpha: " + alpha + "°", 70, 70);
   text("L: " + L + " m", 70, 90);
   text("E: " + E + " N", 70, 110);
   text("v0: " + v0 + " m/s", 70, 130);
-  text("u0: " + u0 + " ?", 70, 150);
+  text("u0: " + u0 + " m/s", 70, 150);
   
+  if(mousePressedFlying == true) {
+    textSize(75);
+    text("[R] for reset", width/2, height/2);
+    textSize(12);
+  }
   
   line(200, height-150, 200, mouseY); // line 1
   line(mouseX, mouseY, 200, mouseY); // line 2
@@ -58,9 +64,10 @@ void draw() {
     L = dist(200, height-150, mouseX, mouseY) / 8;
     //x0 = mouseX;
     //y0 = -mouseY;
-    x0 = 200;             // Skal starte ved slangebøssen og ikke mouseX og Y
+    x0 = 200; // Skal starte ved slangebøssen og ikke mouseX og Y
     y0 = -650;
-    alpha = asin(line1 / dist(200, height-150, mouseX, mouseY));
+    alpha = asin((line1) / dist(200, height-150, mouseX, mouseY));
+    //alpha = atan(line1/line2);  
   }
   
   if(x == 0 && y == 0 && pulled == false) {
@@ -69,17 +76,23 @@ void draw() {
   
   if(x > 0 && y > 0 && pulled == false) {
     circle(x, y, 20);
-  }
+  }  
   fill(0);
   
-  if(mouseR == true && pulled == false) {
+  if(mouseR == true && pulled == false && y < height-15) {
     kast(L);
   }
 }
 
+
 void mousePressed() {
-  mouseP = true;
-  pulled = true;
+  if(birdFlying == false) {
+    mouseP = true;
+    pulled = true;
+    mousePressedFlying = false;
+  } else {
+    mousePressedFlying = true;
+  }
 }
 
 void mouseReleased() {
@@ -107,6 +120,7 @@ void keyPressed() {
     mouseP = false;
     pulled = false;
     birdFlying = false;
+    mousePressedFlying = false;
   }
 }
 
@@ -114,18 +128,19 @@ void kast(float newL) {
   A = alpha;
   E = 50 * (newL * newL);
   u0 = sqrt((2*E)/(m*(1+(A*A))));
-  v0 = A*sqrt((2*E)/(m*(1+(A*A))));
+  v0 = A*(sqrt((2*E)/(m*(1+(A*A)))));
   
   x = u0 * t + x0;
   y = -0.5*g*(t*t)+v0*t+y0;
   
-  y = y * (-1);
+  y = -y;
+  //y = y * (-1);
   
   r[0] = x;
   r[1] = y;
   
   t = t + 0.25;
   
-  println(degrees(alpha));
+  println(y);
   println('-');
 }
