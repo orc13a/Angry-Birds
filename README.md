@@ -21,13 +21,13 @@ Et projekt som har fokus på matematiske modeller inde for fysik emnet "Det skr�
 Fag som er i dette projekt. Fysik `(pi)`, Matematik `(mmhe)`, Programmering `(ajrp)` og Kommunikation og IT `(ae)`.
 
 ###### Gruppe
-* Fremlæggelse gruppe<br>
+* **Fremlæggelse gruppe**<br>
 Oliver C<br>
 Gusatv<br>
 Vittorio<br>
 Valdemar<br>
 
-* Programmerings gruppe<br>
+* **Programmerings gruppe**<br>
 Oliver C<br>
 Mads
 <br>
