@@ -76,6 +76,9 @@ void draw() {
   
   if(x > 0 && y > 0 && pulled == false) {
     circle(x, y, 20);
+    fill(0);
+    text("x: " + u0 + " * " + t + " + " + x0 + " = " + x, 500, 50);
+    text("y: " + "-0.5" + " * " + g + " * " + (t*t) + " + " + v0 + " * " + t + " + " + -y0 + " = " + y, 500, 80);
   }  
   fill(0);
   
