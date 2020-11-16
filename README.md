@@ -17,7 +17,7 @@ Gå til vores GitHub page og der kan du spille vores Angry Birds i din browser.
 
 ## SO3
 Dette er et SO3 projekt på HTX H. C. Ørsted Gymnasiet Lyngby.
-Et projekt som har fokus på matematiske modeller.
+Et projekt som har fokus på matematiske modeller inde for fysik emnet 'Det skrå kast'.
 Fag som er i dette projekt. Fysik `(pi)`, Matematik `(mmhe)`, Programmering `(ajrp)` og Kommunikation og IT `(ae)`.
 
 ###### Gruppe
