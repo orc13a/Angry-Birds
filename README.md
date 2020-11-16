@@ -23,7 +23,7 @@ Fag som er i dette projekt. Fysik `(pi)`, Matematik `(mmhe)`, Programmering `(aj
 ###### Gruppe
 * **Fremlæggelse gruppe**<br>
 Oliver C<br>
-Gusatv<br>
+Gustav<br>
 Vittorio<br>
 Valdemar<br>
 
