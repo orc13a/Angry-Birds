@@ -66,7 +66,8 @@ void draw() {
     //y0 = -mouseY;
     x0 = 200; // Skal starte ved slangebøssen og ikke mouseX og Y
     y0 = -650;
-    alpha = degrees(acos((line1) / dist(200, height-150, mouseX, mouseY)));
+    alpha = acos((line2) / dist(200, height-150, mouseX, mouseY));
+    //alpha = degrees(acos((line1) / dist(200, height-150, mouseX, mouseY)));
     //alpha = (((2 * PI) / 360) * acos((line1) / dist(200, height-150, mouseX, mouseY)));
     //alpha = atan(line1/line2);  
   }

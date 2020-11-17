@@ -136,12 +136,11 @@ function kast(newL) {
     y = -0.5*g*(t*t)+v0*t+y0;
 
     y = -y;
-    //y = y * (-1);
+
+    t = t + 0.25;
 
     r[0] = x;
     r[1] = y;
-
-    t = t + 0.25;
 
     //println(y);
     //println('-');
