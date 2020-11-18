@@ -45,8 +45,11 @@ void draw() {
     textSize(12);
   }
   
-  line(200, height-150, 200, mouseY); // line 1 | Lodret
-  line(mouseX, mouseY, 200, mouseY); // line 2 | vandret
+  //line(200, height-150, 200, mouseY); // line 1 | Lodret
+  //line(mouseX, mouseY, 200, mouseY); // line 2 | vandret
+  
+  //line(200, height-150, mouseX, height-150); // line 1 | vandret
+  //line(mouseX, height-150, mouseX, mouseY); // line 2 | lodret
   
   float line1 = dist(200, height-150, 200, mouseY);
   float line2 = dist(mouseX, mouseY, 200, mouseY);
